@@ -1571,6 +1571,11 @@ public:
   */
   int differentModel(OsiSolverInterface & other, 
 		     bool ignoreNames=true);
+ void statistics(double & minimumNegative, double & maximumNegative,
+		  double & minimumPositive, double & maximumPositive, 
+		  int type=3) const;
+  void getMinRHS(double & minRHS) const;
+
 #ifdef COIN_SNAPSHOT
   /// Return a CoinSnapshot
   virtual CoinSnapshot * snapshot(bool createArrays=true) const;
